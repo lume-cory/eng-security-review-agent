@@ -68,7 +68,60 @@ const outstandingQuestions: OutstandingQuestion[] = [
     source: "Email to security-review alias",
     sourceLink: "mailto:security-review@company.com?subject=Data%20Encryption%20Question"
   },
-  // Add more outstanding questions here
+  {
+    id: 3,
+    question: "Static analysis found multiple SQL injection vulnerabilities in the reporting service. What's the recommended approach for parameterized queries?",
+    user: "Alex Chen",
+    stage: "Implementation",
+    dueDate: "2024-04-10",
+    suggestedResponse: "All database queries must use parameterized queries or ORMs. Replace string concatenation with prepared statements. For the reporting service specifically: 1) Use TypeORM's built-in query builder with parameters, 2) Implement input validation at API boundaries, 3) Add SQL injection testing to the CI pipeline using SQLMap.",
+    supportingDocs: [
+      { name: "Secure Coding Guidelines #SQL-001", link: "https://docs.company.com/security/SQL-001" },
+      { name: "Static Analysis Report #SA-456", link: "https://security.company.com/reports/SA-456" }
+    ],
+    otherDocs: [
+      { name: "TypeORM Security Best Practices", link: "https://docs.company.com/frameworks/typeorm-security" },
+      { name: "Input Validation Patterns", link: "https://docs.company.com/security/input-validation" }
+    ],
+    source: "SonarQube Security Gate",
+    sourceLink: "https://sonar.company.com/project/issues?id=reporting-service"
+  },
+  {
+    id: 4,
+    question: "What are the security requirements for implementing WebSocket connections in our real-time trading platform?",
+    user: "Sarah Kim",
+    stage: "Architecture Review",
+    dueDate: "2024-04-15",
+    suggestedResponse: "WebSocket security requirements include: 1) TLS 1.3 for all connections, 2) Token-based authentication with short-lived JWTs, 3) Rate limiting per client, 4) Message size limits, 5) Input validation for all messages, 6) Automatic connection termination after 15 minutes of inactivity.",
+    supportingDocs: [
+      { name: "WebSocket Security Standard #WS-001", link: "https://docs.company.com/security/WS-001" },
+      { name: "Real-time Systems Security", link: "https://docs.company.com/security/realtime" }
+    ],
+    otherDocs: [
+      { name: "Trading Platform Architecture", link: "https://docs.company.com/architecture/trading" },
+      { name: "WebSocket Implementation Guide", link: "https://docs.company.com/development/websocket" }
+    ],
+    source: "Architecture Review Board",
+    sourceLink: "https://jira.company.com/browse/ARB-789"
+  },
+  {
+    id: 5,
+    question: "How should we implement secure CI/CD pipelines for our new Kubernetes-based microservices?",
+    user: "Mike Johnson",
+    stage: "DevOps Design",
+    dueDate: "2024-04-20",
+    suggestedResponse: "Secure CI/CD implementation requires: 1) Signed commits and container images, 2) SLSA Level 3 compliance, 3) Automated container scanning, 4) Secret scanning in pipeline, 5) IaC security scanning, 6) Automated SBOM generation and vulnerability tracking, 7) Separate credentials per environment.",
+    supportingDocs: [
+      { name: "CI/CD Security Controls #CICD-002", link: "https://docs.company.com/security/CICD-002" },
+      { name: "Container Security Policy", link: "https://docs.company.com/security/containers" }
+    ],
+    otherDocs: [
+      { name: "Kubernetes Security Hardening", link: "https://docs.company.com/platform/k8s-security" },
+      { name: "Pipeline Templates", link: "https://docs.company.com/cicd/templates" }
+    ],
+    source: "DevSecOps Planning",
+    sourceLink: "https://jira.company.com/browse/DEVSEC-456"
+  }
 ]
 
 const resolvedQuestions: ResolvedQuestion[] = [

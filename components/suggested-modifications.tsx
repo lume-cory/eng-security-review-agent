@@ -26,6 +26,34 @@ export function SuggestedModifications({ onBack }: { onBack: () => void }) {
       suggestedUpdate: "Create a new design review document for containerized applications, covering image security, runtime protection, and orchestration security considerations.",
       status: 'pending',
       modifiedContent: ''
+    },
+    {
+      id: 3,
+      question: "What are the security requirements for implementing OAuth 2.0 and OIDC?",
+      suggestedUpdate: "Create an authentication implementation guide covering OAuth 2.0 flows, token handling, PKCE implementation, and secure callback handling for web and mobile applications.",
+      status: 'pending',
+      modifiedContent: ''
+    },
+    {
+      id: 4,
+      question: "Static Analysis found unvalidated file uploads in the content management system",
+      suggestedUpdate: "Add a section to the Secure Development Guidelines covering file upload security, including: allowed file types, size limits, malware scanning, storage location security, and filename sanitization.",
+      status: 'pending',
+      modifiedContent: ''
+    },
+    {
+      id: 5,
+      question: "What are the security requirements for implementing a new API Gateway?",
+      suggestedUpdate: "Create an API security architecture document covering: authentication methods, rate limiting, input validation, logging requirements, and API versioning security considerations.",
+      status: 'pending',
+      modifiedContent: ''
+    },
+    {
+      id: 6,
+      question: "How should we implement secrets management for our microservices?",
+      suggestedUpdate: "Develop a secrets management guide covering: vault implementation, rotation policies, access controls, and integration with container orchestration platforms.",
+      status: 'pending',
+      modifiedContent: ''
     }
   ])
 
@@ -48,6 +76,26 @@ export function SuggestedModifications({ onBack }: { onBack: () => void }) {
       selectedDoc: undefined as string | undefined,  // Change null to undefined
       status: 'pending',
       suggestedModification: "Update the Data Governance Policy to state: 'Customer data must be retained for the minimum period necessary to fulfill the purpose for which it was collected, not exceeding 5 years unless legally required.'",
+      modifiedContent: ''
+    },
+    {
+      id: 3,
+      requirement: "API Authentication",
+      doc1: { name: "API Security Standard", content: "All APIs must use OAuth 2.0 for authentication." },
+      doc2: { name: "Legacy Systems Guide", content: "Internal APIs should use Basic Auth with TLS." },
+      selectedDoc: undefined as string | undefined,
+      status: 'pending',
+      suggestedModification: "Update all documentation to require OAuth 2.0 for new APIs, with a migration plan for legacy systems. Basic Auth may be temporarily permitted for internal legacy systems with compensating controls.",
+      modifiedContent: ''
+    },
+    {
+      id: 4,
+      requirement: "Session timeout",
+      doc1: { name: "Web Security Policy", content: "User sessions must timeout after 15 minutes of inactivity." },
+      doc2: { name: "Customer Experience Guidelines", content: "User sessions should remain active for 4 hours to minimize re-authentication." },
+      selectedDoc: undefined as string | undefined,
+      status: 'pending',
+      suggestedModification: "Implement adaptive session timeouts: 15 minutes for high-risk operations, 2 hours for standard sessions with automatic re-authentication for sensitive actions.",
       modifiedContent: ''
     }
   ])
@@ -72,6 +120,26 @@ export function SuggestedModifications({ onBack }: { onBack: () => void }) {
       note: "",
       status: 'pending',
       modifiedContent: ''
+    },
+    {
+      id: 3,
+      name: "Docker Security Guidelines v1",
+      lastUpdated: "2019-03-20",
+      replacementDoc: "Container Security Architecture Guide",
+      suggestedHeaderText: "DEPRECATED: This document predates current container orchestration practices. Please refer to the 'Container Security Architecture Guide' for current security requirements.",
+      note: "",
+      status: 'pending',
+      modifiedContent: ''
+    },
+    {
+      id: 4,
+      name: "AWS Security Baseline",
+      lastUpdated: "2020-08-10",
+      replacementDoc: "Cloud Security Framework 2024",
+      suggestedHeaderText: "OUTDATED: This document doesn't reflect current cloud-native security controls. Please use the 'Cloud Security Framework 2024' for updated guidance.",
+      note: "",
+      status: 'pending',
+      modifiedContent: ''
     }
   ])
 
@@ -89,6 +157,38 @@ export function SuggestedModifications({ onBack }: { onBack: () => void }) {
       currentPractice: "Static application security testing (SAST) during the build phase",
       suggestedImprovement: "Integrate SAST into the development process with IDE plugins and pre-commit hooks, in addition to build-time scans.",
       framework: "OWASP SAMM",
+      status: 'pending',
+      modifiedContent: ''
+    },
+    {
+      id: 3,
+      currentPractice: "Manual security review for infrastructure changes",
+      suggestedImprovement: "Implement Infrastructure as Code (IaC) security scanning in CI/CD pipeline with automated policy enforcement and compliance checks.",
+      framework: "AWS Well-Architected Framework",
+      status: 'pending',
+      modifiedContent: ''
+    },
+    {
+      id: 4,
+      currentPractice: "Quarterly vulnerability scanning",
+      suggestedImprovement: "Deploy continuous vulnerability scanning with risk-based prioritization and automated ticketing for critical findings.",
+      framework: "CIS Controls",
+      status: 'pending',
+      modifiedContent: ''
+    },
+    {
+      id: 5,
+      currentPractice: "Manual secret rotation every 90 days",
+      suggestedImprovement: "Implement automated secret rotation using a secrets management platform with automatic distribution to applications.",
+      framework: "NIST SP 800-53",
+      status: 'pending',
+      modifiedContent: ''
+    },
+    {
+      id: 6,
+      currentPractice: "Security logging to local storage",
+      suggestedImprovement: "Centralize security logs in SIEM with real-time alerting, automated correlation, and ML-based anomaly detection.",
+      framework: "SOC 2",
       status: 'pending',
       modifiedContent: ''
     }
