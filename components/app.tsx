@@ -52,7 +52,7 @@ export default function SecurityReviewApp() {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Engineering Security Review Agent</h1>
         <Button onClick={() => setShowModifications(!showModifications)}>
-          {showModifications ? 'Back to Review' : 'View Suggested Modifications'}
+          {showModifications ? 'Back to Review Requests' : 'View Suggested Modifications'}
         </Button>
       </div>
       

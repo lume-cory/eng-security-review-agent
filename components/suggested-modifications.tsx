@@ -273,7 +273,6 @@ export function SuggestedModifications({ onBack }: { onBack: () => void }) {
     <div className="container mx-auto p-4 space-y-8">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Suggested Modifications to Security Documentation</h1>
-        <Button onClick={onBack}>Back to Main Dashboard</Button>
       </div>
       
       <Tabs defaultValue="lack-of-documentation">
