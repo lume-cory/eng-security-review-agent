@@ -1,3 +1,6 @@
+# THIS REPO IS DEPRECATED
+## It has been moved to /app/agents in the [security-control-dashboard](https://github.com/lume-cory/security-control-dashboard) repo & should be maintained there
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
